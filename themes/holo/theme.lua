@@ -101,6 +101,8 @@ local markup = lain.util.markup
 local blue   = "#80CCE6"
 local space3 = markup.font("Roboto 3", " ")
 
+
+
 -- Clock
 local mytextclock = wibox.widget.textclock(markup("#FF7034", space3 .. "%H:%M   " .. markup.font("Roboto 4", " ")))
 mytextclock.font = theme.font
@@ -202,11 +204,15 @@ function ()
     theme.mpd.update()
 end)))
 
+
+
+
+
 -- Battery
 local bat = lain.widget.bat({
     settings = function()
         bat_header = " Bat "
-        bat_p      = bat_now.perc .. "%"
+        bat_p      = bat_now.perc .. "% "
         if bat_now.ac_status == 1 then
             bat_p = bat_p .. "Plugged "
         end

@@ -101,7 +101,7 @@ awful.util.terminal = terminal
 awful.util.tagnames = { "WEB", "TERM", "FILES", "CODE", "MEDIA" }
 awful.layout.layouts = {
     awful.layout.suit.tile,
-    awful.layout.suit.floating,
+    --awful.layout.suit.floating,
     --awful.layout.suit.tile.left,
     --awful.layout.suit.tile.bottom,
     --awful.layout.suit.tile.top,
@@ -698,6 +698,30 @@ awful.rules.rules = {
 
     { rule = { class = "Gimp", role = "gimp-image-window" },
           properties = { maximized = true } },
+
+    { rule = { instance = "konsole" },
+
+  	properties = { tag = "TERM" } },
+
+   { rule = { instance = "spotify" },
+
+  	properties = { tag = "MEDIA" } },
+
+
+   { rule = { instance = "thunar" },
+
+  	properties = { tag = "FILES" } },
+
+
+
+   { rule = { instance = "rambox" },
+
+  	properties = { tag = "MEDIA" } },
+
+
+   { rule = { instance = "code" },
+
+  	properties = { tag = "CODE" } },
 }
 -- }}}
 
