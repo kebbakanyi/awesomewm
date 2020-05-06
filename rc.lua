@@ -101,7 +101,7 @@ awful.util.terminal = terminal
 awful.util.tagnames = { "WEB", "TERM", "FILES", "CODE", "MEDIA" }
 awful.layout.layouts = {
     awful.layout.suit.tile,
-    --awful.layout.suit.floating,
+    awful.layout.suit.floating,
     --awful.layout.suit.tile.left,
     --awful.layout.suit.tile.bottom,
     --awful.layout.suit.tile.top,
@@ -798,3 +798,32 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- possible workaround for tag preservation when switching back to default screen:
 -- https://github.com/lcpz/awesome-copycats/issues/251
 -- }}}
+--
+--
+-- 
+--
+  do
+
+  local cmds =
+
+  {
+
+    "firefox",
+
+    "konsole",
+    "spotify",
+    "rambox",
+
+  }
+
+
+
+  for _,i in pairs(cmds) do
+
+    awful.util.spawn(i)
+
+  end
+
+end
+
+
